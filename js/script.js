@@ -49,3 +49,11 @@ bookingForm.addEventListener('submit', async (event) => {
     submitButton.textContent = originalLabel;
   }
 });
+
+const galleryTrack = document.querySelector(".gallery-track");
+
+if (galleryTrack) {
+
+    galleryTrack.innerHTML += galleryTrack.innerHTML;
+
+}
