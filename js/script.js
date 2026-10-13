@@ -29,37 +29,48 @@ if (departureInput) departureInput.min = arrivalInput?.value || localToday;
 arrivalInput?.addEventListener('change', () => {
   if (!departureInput) return;
   departureInput.min = arrivalInput.value || localToday;
-  if (departureInput.value && departureInput.value < departureInput.min) departureInput.value = '';
+  if (departureInput.value && departureInput.value <= departureInput.min) departureInput.value = '';
 });
 
 bookingForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
+
   if (arrivalInput?.value && departureInput?.value && departureInput.value <= arrivalInput.value) {
     formStatus.className = 'form-status error';
     formStatus.textContent = 'Please choose a departure date that is after your arrival date.';
     departureInput.focus();
     return;
   }
+
   const submitButton = bookingForm.querySelector('button[type="submit"]');
   const originalLabel = submitButton.textContent;
   formStatus.className = 'form-status';
   formStatus.textContent = 'Sending your enquiry…';
   submitButton.disabled = true;
   submitButton.textContent = 'Sending…';
+
   try {
     const response = await fetch(bookingForm.action, {
       method: 'POST',
       body: new FormData(bookingForm),
       headers: { Accept: 'application/json' },
     });
-    if (!response.ok) throw new Error('The enquiry service did not accept the request.');
+    const result = await response.json();
+
+    // FormSubmit can return HTTP 200 even when a form is not activated or a request fails.
+    if (!response.ok || String(result.success).toLowerCase() !== 'true') {
+      throw new Error(result.message || 'The enquiry could not be accepted.');
+    }
+
     bookingForm.reset();
     if (arrivalInput) arrivalInput.min = localToday;
     if (departureInput) departureInput.min = localToday;
     formStatus.textContent = 'Thank you. Your enquiry has been sent to The Palazzo Residence. Our team will follow up with you.';
   } catch (error) {
     formStatus.classList.add('error');
-    formStatus.textContent = 'We could not send your enquiry just now. Please try again or contact us by email or WhatsApp.';
+    formStatus.textContent = error.message && !error.message.includes('Failed to fetch')
+      ? `We could not confirm that your enquiry was sent: ${error.message} Please try again or contact us by email or WhatsApp.`
+      : 'We could not confirm that your enquiry was sent. Please check your connection and try again, or contact us by email or WhatsApp.';
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = originalLabel;
