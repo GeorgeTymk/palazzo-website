@@ -1,0 +1,54 @@
+
+/* The Palazzo Residence: branding, amenities, booking and responsive refinements */
+.logo { gap:10px; letter-spacing:normal; }
+.logo-image { width:48px; height:48px; object-fit:contain; }
+.logo-wordmark { display:flex; flex-direction:column; gap:7px; color:inherit; font:600 12px var(--sans); letter-spacing:.14em; white-space:nowrap; }
+.logo-wordmark small { position:static; width:auto; font:500 8px var(--sans); letter-spacing:.19em; }
+.loader span { padding:0 20px; font-size:clamp(23px,4vw,42px); text-align:center; letter-spacing:.13em; }
+.residence-hero .hero-image { background-image:url("../images/hero.jpg.jpg"); }
+.hero h1 { font:600 clamp(45px,6.2vw,79px)/.95 var(--sans); letter-spacing:-.065em; }
+.hero h1 em { color:var(--gold); font-style:normal; }
+.about-copy > p:not(.handwritten) { line-height:1.8; }
+.amenity-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.amenity-grid .suite-detail { min-height:230px; }
+.amenity-grid .suite-detail > p:not(.suite-type) { min-height:0; }
+.amenities-list { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; max-width:1050px; margin:35px auto 0; }
+.amenities-list span { padding:12px 15px; border:1px solid rgba(198,161,91,.4); color:#e8e3d9; font-size:11px; letter-spacing:.04em; }
+.amenities-list b { margin-right:6px; color:var(--gold); font-weight:600; }
+.stay-types h2 { margin:0; font:500 clamp(43px,5vw,70px) var(--serif); letter-spacing:-.05em; }
+.stay-types .value-grid article { padding-top:6px; }
+.stay-types .value-grid span { font:600 9px var(--sans); letter-spacing:.12em; }
+.hospitality { display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(45px,9vw,120px); align-items:center; }
+.hospitality h2 { font-size:clamp(40px,4.7vw,66px); }
+.hospitality-copy > p:not(.handwritten) { max-width:500px; font-size:15px; line-height:1.8; }
+.promise-list p { display:grid; grid-template-columns:35px 1fr; column-gap:12px; margin:0; padding:17px 0; border-bottom:1px solid #d6ccbe; }
+.promise-list p:first-child { border-top:1px solid #d6ccbe; }
+.promise-list span { grid-row:span 2; color:#a17c43; font:500 14px var(--serif); }
+.promise-list b { font:500 23px var(--serif); }
+.promise-list small { margin-top:4px; color:#665d53; font:400 12px/1.6 var(--sans); }
+.events .closing-line { font-weight:600; }
+.contact-note { max-width:430px; font-size:13px; line-height:1.7; color:#655d53; }
+.booking-form label:has(textarea) { grid-column:1/-1; }
+.booking-form button:disabled { opacity:.65; cursor:wait; }
+.site-footer { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:22px; padding:30px clamp(24px,6vw,90px); background:#0d120e; color:#fff; }
+.site-footer > p,.site-footer > a:not(.logo),.site-footer > small { margin:0; color:#d9d4ca; font-size:10px; text-decoration:none; }
+.site-footer .logo { color:#fff; }
+@media(max-width:860px) {
+  .site-header { gap:14px; }
+  .logo-wordmark { font-size:10px; }
+  .logo-image { width:40px; height:40px; }
+  .amenity-grid,.hospitality { grid-template-columns:1fr; }
+  .amenity-grid { max-width:430px; }
+  .amenity-grid .suite-detail { min-height:0; }
+  .hospitality { gap:30px; }
+}
+@media(max-width:560px) {
+  .logo { gap:7px; }
+  .logo-wordmark { font-size:9px; letter-spacing:.1em; }
+  .logo-wordmark small { font-size:7px; letter-spacing:.12em; }
+  .logo-image { width:34px; height:34px; }
+  .hero h1 { font-size:clamp(37px,10vw,56px); }
+  .amenities-list { justify-content:flex-start; }
+  .amenities-list span { flex:1 1 42%; }
+  .site-footer { align-items:flex-start; flex-direction:column; }
+}
