@@ -12,20 +12,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern.css?v=3">
+  <link rel="stylesheet" href="modern.css?v=4">
   <style>
-    /* Critical fallback: protects the logo and page structure if modern.css is temporarily unavailable. */
+    /* Minimal critical protection; the main layout lives in modern.css. */
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;background:#f7f5ef;color:#17211d;font-family:Arial,sans-serif}
-    img{max-width:100%;object-fit:cover}
-    .site-header{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 32px;background:#fff;position:relative;z-index:20}
-    .brand{display:flex;align-items:center;gap:12px;min-width:max-content;text-decoration:none;color:inherit}
-    .brand-mark{display:block!important;width:46px!important;height:46px!important;max-width:46px!important;object-fit:contain!important;flex:0 0 46px}
-    .brand-name{font-size:15px;font-weight:700;letter-spacing:.1em;line-height:1.2}.brand-name small{display:block;font-size:8px;margin-top:5px}
-    .primary-nav{display:flex;align-items:center;gap:18px;font-size:12px}.primary-nav a{text-decoration:none;color:inherit}.nav-cta{padding:12px 16px;background:#d5a34e;border-radius:6px}
-    .hero,.benefits,.spotlights,.amenity-cards,.who-cards{max-width:1440px;width:calc(100% - 48px);margin:24px auto;}
-    .hero{display:grid;grid-template-columns:1.8fr .8fr;gap:16px}.hero-main{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:#123d30;color:#fff;border-radius:14px}.hero-copy{padding:32px}.hero-photo{min-height:300px}.hero-photo img{width:100%;height:100%;object-fit:cover}.hero-side{display:grid;gap:12px}.mini-feature{position:relative;min-height:110px;overflow:hidden}.mini-feature img{width:100%;height:100%;position:absolute;inset:0}.mini-feature-copy{position:absolute;bottom:0;left:0;right:0;padding:10px;background:#123d30;color:#fff}
-    @media(max-width:820px){.site-header{min-height:72px;padding:10px 16px}.brand-mark{width:42px!important;height:42px!important;max-width:42px!important;flex-basis:42px}.menu{display:block}.primary-nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:16px;flex-direction:column;align-items:stretch}.primary-nav.active{display:flex}.hero{grid-template-columns:1fr;width:calc(100% - 24px)}.hero-main{grid-template-columns:1fr}.hero-photo{order:-1;height:220px;min-height:0}.hero-copy{padding:24px}.hero-side{grid-template-columns:repeat(3,minmax(0,1fr))}.mini-feature{min-height:110px}.benefits,.spotlights,.amenity-cards,.who-cards{width:calc(100% - 24px)}}
+    body{margin:0;background:#f7f5ef;color:#17211d}
+    img{max-width:100%}
+    .brand-mark{display:block;width:46px;height:46px;max-width:46px;object-fit:contain;flex:0 0 46px}
+    .site-header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:max-content}
+    @media(max-width:820px){.brand-mark{width:42px;height:42px;max-width:42px;flex-basis:42px}}
   </style>
 
 </head>
@@ -48,24 +44,38 @@
         <div class="hero-copy">
           <p class="eyebrow">A PLACE TO STAY. A PLACE TO GATHER.</p>
           <h1 id="hero-title">A home away<br>from <em>home.</em></h1>
-          <p class="hero-description">Modern serviced residence stays and memorable dining in the heart of Blantyre. Comfort, good food and room to make yourself at home.</p>
-          <div class="hero-actions"><a class="button button-green" href="#residence">Explore the Residence <span>→</span></a><a class="button button-outline" href="#restaurant">Discover the Restaurant</a></div>
+          <p class="hero-description">Modern serviced residences in the heart of Blantyre. Comfort, space and the freedom to stay your way.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#residence">Explore the Residence <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="#restaurant">Discover the Restaurant</a>
+          </div>
           <p class="location-line"><span aria-hidden="true">⌖</span> Blantyre, Malawi</p>
         </div>
-        <div class="hero-photo"><img src="images/hero.jpg.jpg" alt="Comfortable, welcoming interior at The Palazzo Residence"></div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="Bright, contemporary living room with a comfortable sofa and warm natural finishes" fetchpriority="high">
+        </div>
       </div>
-      <div class="hero-side" aria-label="Explore the residence">
-        <a class="mini-feature" href="#spaces"><img src="images/gallery1.jpg.jpg" alt="Residence bedroom"><span class="mini-feature-copy"><b>Bedrooms</b><small>Restful and welcoming</small></span><span class="circle-arrow" aria-hidden="true">→</span></a>
-        <a class="mini-feature" href="#amenities"><img src="images/gallery2.jpg.jpg" alt="Residence bathroom and living space"><span class="mini-feature-copy"><b>Everyday comfort</b><small>Thoughtful essentials</small></span><span class="circle-arrow" aria-hidden="true">→</span></a>
-        <a class="mini-feature" href="#restaurant"><img src="images/wings.jpeg" alt="Food served at The Palazzo Restaurant"><span class="mini-feature-copy"><b>Restaurant</b><small>Great food, better company</small></span><span class="circle-arrow" aria-hidden="true">→</span></a>
+      <div class="hero-feature-grid" aria-label="Explore the residence">
+        <a class="hero-card" href="#spaces">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Comfortable bedroom with crisp bedding" loading="lazy">
+          <span class="hero-card-copy"><span><b>Bedrooms</b><small>Spacious, stylish and relaxing</small></span><span class="card-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <a class="hero-card" href="#amenities">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Modern fully equipped kitchen" loading="lazy">
+          <span class="hero-card-copy"><span><b>Fully equipped kitchen</b><small>Cook at your convenience</small></span><span class="card-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <a class="hero-card" href="#amenities">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Private outdoor seating surrounded by greenery" loading="lazy">
+          <span class="hero-card-copy"><span><b>Private outdoor space</b><small>Unwind in a peaceful setting</small></span><span class="card-arrow" aria-hidden="true">→</span></span>
+        </a>
       </div>
     </section>
 
     <section class="benefits shell" aria-label="Palazzo guest benefits">
-      <article class="benefit"><span class="benefit-icon" aria-hidden="true">▣</span><span><b>Easy Enquiries</b><small>Simple and direct</small></span></article>
-      <article class="benefit"><span class="benefit-icon" aria-hidden="true">▤</span><span><b>Flexible Stays</b><small>Short or long term</small></span></article>
-      <article class="benefit"><span class="benefit-icon" aria-hidden="true">♡</span><span><b>Guest Support</b><small>We’re here to help</small></span></article>
-      <article class="benefit"><span class="benefit-icon" aria-hidden="true">♧</span><span><b>A Place to Gather</b><small>Family, friends and work</small></span></article>
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">↗</span><span><b>Easy enquiries</b><small>Simple and direct</small></span></article>
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">▦</span><span><b>Flexible stays</b><small>Short or long term</small></span></article>
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">♡</span><span><b>Guest support</b><small>We’re here to help</small></span></article>
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">♙</span><span><b>A place to gather</b><small>For family, friends and work</small></span></article>
     </section>
 
     <section class="spotlights shell" id="residence">
