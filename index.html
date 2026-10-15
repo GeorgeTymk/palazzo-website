@@ -3,148 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover The Palazzo in Blantyre, Malawi: a fully furnished three-bedroom residence for short and extended stays, alongside The Palazzo Restaurant for dining and memorable moments.">
-  <meta name="theme-color" content="#17261d">
+  <meta name="description" content="Discover The Palazzo in Blantyre, Malawi: modern serviced residence stays and memorable restaurant dining.">
+  <meta name="theme-color" content="#123d30">
   <title>The Palazzo | Restaurant &amp; Residence · Blantyre</title>
+  <!-- Keep the official Palazzo logo and favicon already used in the project. -->
   <link rel="icon" type="image/png" href="images/PZ.png">
   <link rel="apple-touch-icon" href="images/PZ.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/modern.css">
 </head>
 <body>
-  <div class="loader" aria-hidden="true"><span>THE PALAZZO RESIDENCE</span></div>
-  <header id="navbar" class="site-header">
-    <a class="logo" href="#home" aria-label="The Palazzo Residence home"><img src="images/PZ.png" alt="The Palazzo logo" class="logo-image"><span class="logo-wordmark">THE PALAZZO<small>RESTAURANT · RESIDENCE</small></span></a>
-    <button class="menu" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
-    <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
-      <a href="#home">Home</a><a href="#about">The Residence</a><a href="#features">Amenities</a><a href="#restaurant">Restaurant</a><a href="#stays">Who It's For</a><a href="#contact">Contact</a><a class="book-btn" href="#contact">Enquire about a stay</a>
+  <header class="site-header" id="navbar">
+    <a class="brand" href="#home" aria-label="The Palazzo home">
+      <img src="images/PZ.png" class="brand-mark" alt="The Palazzo official logo">
+      <span class="brand-name">THE PALAZZO<small>RESTAURANT · RESIDENCE</small></span>
+    </a>
+    <button class="menu" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#residence">Residence</a><a href="#amenities">Amenities</a><a href="#restaurant">Restaurant</a><a href="#who-its-for">Who It’s For</a><a href="#contact">Contact</a>
+      <a class="nav-cta" href="#contact">Enquire about a stay <span aria-hidden="true">→</span></a>
     </nav>
   </header>
+
   <main>
-    <section class="hero residence-hero" id="home">
-      <div class="hero-image" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="kicker">Stay · Dine · Make yourself at home in Blantyre</p>
-        <p class="handwritten">Your space. Your comfort. Your stay.</p>
-        <h1>MORE THAN<br>A ROOM.<br><em>A PLACE TO SETTLE IN.</em></h1>
-        <span class="rule"></span>
-        <p class="hero-copy">From the comfort of The Palazzo Residence to the welcoming atmosphere of The Palazzo Restaurant, discover hospitality made for staying, dining and coming together.</p>
-        <div class="hero-buttons"><a class="button button-gold" href="#about">Discover the residence <span>→</span></a><a class="button button-light" href="#restaurant">Explore the restaurant</a></div>
+    <section class="hero shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow">A PLACE TO STAY. A PLACE TO GATHER.</p>
+          <h1 id="hero-title">A home away<br>from <em>home.</em></h1>
+          <p class="hero-description">Modern serviced residence stays and memorable dining in the heart of Blantyre. Comfort, good food and room to make yourself at home.</p>
+          <div class="hero-actions"><a class="button button-green" href="#residence">Explore the Residence <span>→</span></a><a class="button button-outline" href="#restaurant">Discover the Restaurant</a></div>
+          <p class="location-line"><span aria-hidden="true">⌖</span> Blantyre, Malawi</p>
+        </div>
+        <div class="hero-photo"><img src="images/hero.jpg.jpg" alt="Comfortable, welcoming interior at The Palazzo Residence"></div>
       </div>
-      <a class="scroll-cue" href="#about">Explore the residence <span>↓</span></a>
-    </section>
-    <section id="about" class="about section">
-      <div class="about-image image-card"><img src="images/hero.jpg.jpg" alt="An inviting view representing the comfort of The Palazzo Residence" loading="lazy"></div>
-      <div class="about-copy"><p class="handwritten gold">Welcome to your home away from home</p><span class="rule"></span><h2>ROOM TO LIVE.<br>SPACE TO BREATHE.</h2>
-        <p>The Palazzo Residence is a fully furnished three-bedroom residence in Blantyre, created for guests who want more than a conventional hotel room.</p>
-        <p>Whether you are travelling for business, spending time with family, working on a project or staying for an extended period, our aim is to make your stay comfortable, convenient and genuinely enjoyable.</p>
-        <a class="text-link" href="#features">Get to know the residence <span>→</span></a>
+      <div class="hero-side" aria-label="Explore the residence">
+        <a class="mini-feature" href="#spaces"><img src="images/gallery1.jpg.jpg" alt="Residence bedroom"><span class="mini-feature-copy"><b>Bedrooms</b><small>Restful and welcoming</small></span><span class="circle-arrow" aria-hidden="true">→</span></a>
+        <a class="mini-feature" href="#amenities"><img src="images/gallery2.jpg.jpg" alt="Residence bathroom and living space"><span class="mini-feature-copy"><b>Everyday comfort</b><small>Thoughtful essentials</small></span><span class="circle-arrow" aria-hidden="true">→</span></a>
+        <a class="mini-feature" href="#restaurant"><img src="images/wings.jpeg" alt="Food served at The Palazzo Restaurant"><span class="mini-feature-copy"><b>Restaurant</b><small>Great food, better company</small></span><span class="circle-arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
-    <section id="features" class="suites section-dark">
-      <div class="section-intro"><p class="handwritten gold">Considered for everyday comfort</p><span class="rule centered-rule"></span><h2>THE RESIDENCE</h2><p>Practical comforts and the freedom to settle in at your own pace.</p></div>
-      <div class="suite-grid amenity-grid">
-        <article class="suite-card"><div class="suite-image"><img src="images/hero.jpg.jpg" alt="Comfortable residential living space" loading="lazy"></div><div class="suite-detail"><p class="suite-type">Space to unwind</p><h3>Room for everyone</h3><p>Three bedrooms and a comfortable living room give you room to relax, reconnect and feel at home.</p></div></article>
-        <article class="suite-card"><div class="suite-image"><img src="images/gallery1.jpg.jpg" alt="Home-style dining and kitchen inspiration" loading="lazy"></div><div class="suite-detail"><p class="suite-type">Freedom and flexibility</p><h3>Your own kitchen</h3><p>A fully equipped kitchen with utilities lets you prepare meals and enjoy the freedom of a home environment.</p></div></article>
-        <article class="suite-card"><div class="suite-image"><img src="images/gallery2.jpg.jpg" alt="Private, restful residential setting" loading="lazy"></div><div class="suite-detail"><p class="suite-type">Everyday convenience</p><h3>Designed to settle in</h3><p>Enjoy 2.5 bathrooms, a laundry room, private outdoor or backyard space, and a family-friendly setting.</p></div></article>
-      </div>
-      <div class="amenities-list" aria-label="Residence features">
-        <span><b>03</b> Bedrooms</span><span><b>2.5</b> Bathrooms</span><span><b>01</b> Fully equipped kitchen</span><span><b>01</b> Laundry room</span><span>Private outdoor space</span><span>Housekeeping services</span><span>Guest support</span>
-      </div>
+
+    <section class="benefits shell" aria-label="Palazzo guest benefits">
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">▣</span><span><b>Easy Enquiries</b><small>Simple and direct</small></span></article>
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">▤</span><span><b>Flexible Stays</b><small>Short or long term</small></span></article>
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">♡</span><span><b>Guest Support</b><small>We’re here to help</small></span></article>
+      <article class="benefit"><span class="benefit-icon" aria-hidden="true">♧</span><span><b>A Place to Gather</b><small>Family, friends and work</small></span></article>
     </section>
-    <section id="restaurant" class="restaurant-section" aria-labelledby="restaurant-title">
-      <div class="restaurant-intro">
-        <p class="handwritten gold">Good food. Good company. Palazzo.</p>
-        <span class="rule centered-rule"></span>
-        <p class="restaurant-eyebrow">DINING AT THE PALAZZO</p>
-        <h2 id="restaurant-title">THE PALAZZO<br><em>RESTAURANT</em></h2>
-        <p>Exceptional cuisine in a beautiful atmosphere. Whether you are meeting friends, sharing a meal or simply taking a moment for yourself, The Palazzo Restaurant is part of the experience.</p>
-        <a class="button button-gold" href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%20Restaurant%2C%20I%27d%20like%20to%20enquire%20about%20dining." target="_blank" rel="noopener noreferrer">Enquire about dining <span>→</span></a>
+
+    <section class="spotlights shell" id="residence">
+      <article class="spotlight residence-spotlight">
+        <div class="spotlight-copy"><p class="eyebrow">THE PALAZZO RESIDENCE</p><h2>A home away<br>from home.</h2><p>A fully furnished three-bedroom residence with a living area, kitchen, 2.5 bathrooms, laundry facilities and private outdoor space.</p><a class="button button-gold" href="#amenities">View the Residence <span>→</span></a></div>
+        <img src="images/gallery1.jpg.jpg" alt="Bedroom and living comforts at The Palazzo Residence" loading="lazy">
+      </article>
+      <article class="spotlight restaurant-spotlight" id="restaurant">
+        <div class="spotlight-copy"><p class="eyebrow">THE PALAZZO RESTAURANT</p><h2>Great food.<br>Better company.</h2><p>Enjoy exceptional cuisine in a welcoming atmosphere, whether you’re meeting friends, sharing a meal or celebrating a special occasion.</p><a class="button button-green" href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%20Restaurant%2C%20I%27d%20like%20to%20enquire%20about%20dining." target="_blank" rel="noopener noreferrer">Explore the Restaurant <span>→</span></a></div>
+        <img src="images/wings.jpeg" alt="A dish from The Palazzo Restaurant" loading="lazy">
+      </article>
+    </section>
+
+    <section class="amenities-section shell" id="amenities">
+      <div class="section-heading"><div><p class="eyebrow">THE PALAZZO RESIDENCE</p><h2>Designed for comfort<br>and flexibility.</h2></div><p>Practical spaces and modern amenities give you the freedom to settle in, whether you’re here for a short stay, a longer visit or a work assignment.</p></div>
+      <div class="amenity-cards" id="spaces">
+        <article class="amenity-card"><img src="images/hero.jpg.jpg" alt="Living area" loading="lazy"><div><h3>Living Area</h3><p>Relax and feel at home</p></div><span class="card-arrow" aria-hidden="true">→</span></article>
+        <article class="amenity-card"><img src="images/gallery2.jpg.jpg" alt="Fully equipped kitchen" loading="lazy"><div><h3>Modern Kitchen</h3><p>Convenience for your stay</p></div><span class="card-arrow" aria-hidden="true">→</span></article>
+        <article class="amenity-card"><img src="images/gallery1.jpg.jpg" alt="Bedroom" loading="lazy"><div><h3>Three Bedrooms</h3><p>Space to rest and recharge</p></div><span class="card-arrow" aria-hidden="true">→</span></article>
+        <article class="amenity-card"><img src="images/gallery2.jpg.jpg" alt="Bathroom" loading="lazy"><div><h3>2.5 Bathrooms</h3><p>Comfort for everyone</p></div><span class="card-arrow" aria-hidden="true">→</span></article>
+        <article class="amenity-card"><img src="images/hero.jpg.jpg" alt="Private outdoor space" loading="lazy"><div><h3>Outdoor Space</h3><p>Unwind in a private setting</p></div><span class="card-arrow" aria-hidden="true">→</span></article>
       </div>
-      <div class="restaurant-grid">
-        <article class="restaurant-card restaurant-card-main">
-          <div class="restaurant-card-image"><img src="images/gallery1.jpg.jpg" alt="Dining at The Palazzo" loading="lazy"></div>
-          <div class="restaurant-card-copy"><span>01 · THE DINING EXPERIENCE</span><h3>Come for the food.<br>Stay for the atmosphere.</h3><p>Make room in your day for good food and time well spent at The Palazzo.</p></div>
-        </article>
-        <article class="restaurant-card">
-          <div class="restaurant-card-image"><img src="images/wings.jpeg" alt="The Palazzo fire wings challenge" loading="lazy"></div>
-          <div class="restaurant-card-copy"><span>02 · A LITTLE HEAT</span><h3>Can you handle the heat?</h3><p>From the Fire Wings Challenge to more moments worth talking about, keep an eye on our social pages for what's happening next.</p><a class="text-link" href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%2C%20tell%20me%20about%20your%20Fire%20Wings%20Challenge." target="_blank" rel="noopener noreferrer">Ask about the challenge <span>→</span></a></div>
-        </article>
-        <article class="restaurant-card">
-          <div class="restaurant-card-image"><img src="images/gallery2.jpg.jpg" alt="A welcoming setting at The Palazzo" loading="lazy"></div>
-          <div class="restaurant-card-copy"><span>03 · MOMENTS TOGETHER</span><h3>Make it a Palazzo moment.</h3><p>Planning a get-together or a special occasion? Contact our team to discuss your plans and requirements.</p><a class="text-link" href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%2C%20I%27d%20like%20to%20ask%20about%20hosting%20a%20gathering." target="_blank" rel="noopener noreferrer">Discuss a gathering <span>→</span></a></div>
-        </article>
-      </div>
-      <p class="restaurant-footnote">For menus, current offers, reservations and event enquiries, please contact The Palazzo team directly.</p>
+      <div class="amenity-tags" aria-label="Residence amenities"><span>03 Bedrooms</span><span>2.5 Bathrooms</span><span>Fully equipped kitchen</span><span>Laundry facilities</span><span>Private outdoor space</span><span>Housekeeping services</span><span>Guest support</span></div>
     </section>
-    <section id="stays" class="feature section">
-      <div class="feature-copy"><p class="handwritten gold">Stay for a night, or stay awhile</p><h2>MADE FOR THE WAY YOU TRAVEL</h2><p>Some trips call for more than a room. The Palazzo Residence gives you space, privacy and the conveniences of a home, whether you are in Blantyre for work, family time or a longer assignment.</p><a class="button button-dark" href="#contact">Discuss your stay <span>→</span></a></div>
-      <div class="feature-image"><img src="images/hero.jpg.jpg" alt="Comfortable residence setting" loading="lazy"></div>
+
+    <section class="dining-section">
+      <div class="dining-photo"><img src="images/wings.jpeg" alt="Food from The Palazzo Restaurant" loading="lazy"></div>
+      <div class="dining-copy"><p class="eyebrow">THE PALAZZO RESTAURANT</p><h2>Exceptional dining<br>experience.</h2><p>Great food, better company. Enjoy time with friends, family or colleagues in the welcoming atmosphere of The Palazzo Restaurant.</p><div class="dining-actions"><a class="button button-green" href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%2C%20please%20share%20your%20restaurant%20menu%20and%20dining%20information." target="_blank" rel="noopener noreferrer">Enquire about dining <span>→</span></a><a class="text-link" href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%2C%20please%20share%20your%20current%20menu." target="_blank" rel="noopener noreferrer">Ask for the menu ↗</a></div></div>
+      <a class="dining-promo" href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%2C%20tell%20me%20about%20your%20Fire%20Wings%20Challenge." target="_blank" rel="noopener noreferrer"><img src="images/gallery2.jpg.jpg" alt="Restaurant atmosphere" loading="lazy"><span><small>A LITTLE SOMETHING SPECIAL</small><b>Make it a<br>Palazzo moment.</b><u>Ask about events →</u></span></a>
     </section>
-    <section class="stay-types section-muted" aria-labelledby="stay-types-title">
-      <p class="handwritten gold">A place for different journeys</p><span class="rule centered-rule"></span><h2 id="stay-types-title">STAYS THAT FIT YOUR PLANS</h2>
-      <div class="value-grid">
-        <article><span>01 · BUSINESS</span><h3>Corporate stays</h3><p>A practical residential option for business travellers, consultants, project teams, organisations and professionals working or visiting in Blantyre.</p></article>
-        <article><span>02 · LONGER VISITS</span><h3>Extended stays</h3><p>For a few nights, several weeks or longer assignments, enjoy a home environment designed around privacy, convenience and comfort.</p></article>
-        <article><span>03 · TIME TOGETHER</span><h3>Families &amp; leisure</h3><p>Make meals, relax in the living room and spend time together, with space to enjoy your stay at your own pace.</p></article>
-      </div>
+
+    <section class="who-section shell" id="who-its-for">
+      <div class="section-heading"><div><p class="eyebrow">A PLACE FOR DIFFERENT JOURNEYS</p><h2>Made for the way<br>you travel.</h2></div><p>More than a conventional hotel room: space, privacy and the conveniences of a home for business, family time and longer stays.</p></div>
+      <div class="who-cards"><article><span class="number">01</span><h3>Corporate stays</h3><p>A practical residential option for business travellers, consultants, project teams and organisations visiting Blantyre.</p></article><article><span class="number">02</span><h3>Extended stays</h3><p>For several nights, weeks or longer assignments, settle into a home environment designed around comfort.</p></article><article><span class="number">03</span><h3>Families &amp; leisure</h3><p>Make meals, relax in the living room and spend time together with space to enjoy your stay at your own pace.</p></article></div>
     </section>
-    <section class="hospitality section">
-      <div class="hospitality-copy"><p class="handwritten gold">The Palazzo promise</p><span class="rule"></span><h2>CARE IN THE DETAILS.<br>COMFORT IN THE EXPERIENCE.</h2><p>We believe hospitality is shown through the experience: a clean and welcoming environment, responsive guest support, privacy and attention to the details that make a stay easier.</p></div>
-      <div class="promise-list"><p><span>01</span><b>Comfort</b><small>A relaxed environment where you can feel at ease.</small></p><p><span>02</span><b>Convenience</b><small>Room to live, cook, rest and settle into a routine.</small></p><p><span>03</span><b>Care</b><small>Thoughtful attention and respect for every guest.</small></p><p><span>04</span><b>Professionalism</b><small>Consistency, accountability and attention to detail.</small></p></div>
-    </section>
-    <section class="events section-muted" aria-labelledby="why-title"><p class="handwritten gold">Why The Palazzo Residence?</p><h2 id="why-title">BECAUSE SOMETIMES<br>YOU NEED MORE THAN A ROOM.</h2><p>You need space to breathe. A kitchen to make your own meal. A living room to relax in. Privacy when you need it. Support when you need us.</p><p class="closing-line">The Palazzo Residence brings these elements together in one comfortable residential experience in Blantyre.</p><a class="text-link" href="#contact">Make an enquiry <span>→</span></a></section>
-    <section class="location section" aria-labelledby="location-title"><div class="location-copy"><p class="handwritten gold">Your stay in Blantyre</p><h2 id="location-title">WELCOME TO<br>THE PALAZZO RESIDENCE</h2><p>A comfortable, secure and welcoming home away from home. Contact our team to discuss your dates, ask questions and plan your stay.</p><div class="location-details"><p><strong>Email enquiries</strong><a href="mailto:montanapalazzomw@gmail.com">montanapalazzomw@gmail.com</a><a href="mailto:brownpalazzomw@gmail.com">brownpalazzomw@gmail.com</a></p><p><strong>Location</strong><span>Blantyre, Malawi</span></p></div><a class="button button-dark" href="https://maps.app.goo.gl/xKHUWS8rhYrbWTFr9" target="_blank" rel="noopener noreferrer">Open location in Google Maps <span>→</span></a></div><a class="map-panel" href="https://maps.app.goo.gl/xKHUWS8rhYrbWTFr9" target="_blank" rel="noopener noreferrer" aria-label="Open The Palazzo Residence location in Google Maps"><span class="map-pin">◇</span><p>The Palazzo Residence</p><small>Blantyre · Malawi · Get directions</small></a></section>
-    <section id="contact" class="contact"><div><p class="handwritten gold">Let's plan your stay</p><h2>MAKE AN ENQUIRY</h2><p>Tell us a little about your visit. Our team will follow up to discuss availability and arrangements.</p><p class="contact-note">For corporate bookings or extended stays, please include your organisation, expected length of stay and any specific requirements in the notes.</p></div>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-intro"><p class="eyebrow">LET’S PLAN YOUR STAY</p><h2>Make an<br>enquiry.</h2><p>Tell us a little about your visit. Our team will follow up to discuss availability and arrangements.</p><p class="contact-note">For corporate bookings or extended stays, please include your organisation, expected length of stay and any specific requirements in the notes.</p><div class="contact-details"><b>Contact The Palazzo</b><a href="mailto:montanapalazzomw@gmail.com">montanapalazzomw@gmail.com</a><a href="mailto:brownpalazzomw@gmail.com">brownpalazzomw@gmail.com</a><span>Blantyre, Malawi</span></div></div>
       <form class="booking-form" action="https://formsubmit.co/ajax/montanapalazzomw@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New Booking Enquiry – The Palazzo Residence | Guest Details for Review">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_cc" value="brownpalazzomw@gmail.com">
-        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-        <h3 class="form-section-title">1. Guest and contact details</h3>
-        <label>First name<input type="text" name="first_name" autocomplete="given-name" placeholder="First name" required></label>
-        <label>Last name<input type="text" name="last_name" autocomplete="family-name" placeholder="Last name" required></label>
-        <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
-        <label>Phone number / WhatsApp<input type="tel" name="phone" autocomplete="tel" placeholder="+265" required></label>
-        <label class="full-width">Residential address<input type="text" name="guest_address" autocomplete="street-address" placeholder="Street or residential address"></label>
-        <label>City / town<input type="text" name="city" autocomplete="address-level2" placeholder="City or town"></label>
-        <label>State / province / country<input type="text" name="region_country" autocomplete="country-name" placeholder="Region or country"></label>
-        <label>Profession (optional)<input type="text" name="profession" placeholder="Occupation / profession"></label>
-        <label>Nationality (optional)<input type="text" name="nationality" placeholder="Nationality"></label>
-
-        <h3 class="form-section-title">2. Stay and accommodation</h3>
-        <label>Arrival date<input type="date" name="arrival" required></label>
-        <label>Departure date<input type="date" name="departure" required></label>
-        <label>Adults<select name="adults" required><option value="">Select adults</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
-        <label>Children<select name="children"><option value="0">No children</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></label>
-        <label>Type of stay<select name="stay_type" required><option value="">Select stay type</option><option>Business / corporate</option><option>Extended stay / project assignment</option><option>Family / leisure</option><option>Other</option></select></label>
-        <label>Preferred room / accommodation type<select name="room_type"><option value="">Please advise / no preference</option><option>Residence / whole apartment</option><option>Corporate accommodation</option><option>Other / discuss with team</option></select></label>
-        <label>Meal / board preference<select name="board_type"><option value="">Not sure / discuss with team</option><option>Bed only</option><option>Bed and breakfast</option><option>Half board</option><option>Full board</option></select></label>
-        <label>Expected length of stay<input type="text" name="length_of_stay" placeholder="e.g. 4 nights or 3 weeks"></label>
-
-        <h3 class="form-section-title">3. Company and billing (if applicable)</h3>
-        <label>Organisation / company<input type="text" name="company" autocomplete="organization" placeholder="Company or organisation name"></label>
-        <label>Company account / reference (optional)<input type="text" name="company_account" placeholder="Account or booking reference"></label>
-        <label>Who will pay for accommodation?<select name="accommodation_payer"><option value="">Select payer</option><option>Myself / guest</option><option>Travel agent</option><option>Company / on account</option></select></label>
-        <label>Who will pay for extras?<select name="extras_payer"><option value="">Select payer</option><option>Myself / guest</option><option>Travel agent</option><option>Company / on account</option><option>No extras expected</option></select></label>
-
-        <h3 class="form-section-title">4. Transport and payment preferences</h3>
-        <label>Car registration (optional)<input type="text" name="car_registration" placeholder="Vehicle registration"></label>
-        <label>Car make / model (optional)<input type="text" name="car_details" placeholder="e.g. Toyota Hilux"></label>
-        <label>Preferred payment method<select name="payment_method"><option value="">Select if known</option><option>Cash</option><option>Credit / debit card</option><option>Cheque</option><option>Bank transfer / EFT</option><option>Mobile money</option><option>Company account / on account</option></select></label>
-        <label>Budget / rate requirements (optional)<input type="text" name="rate_requirements" placeholder="Optional budget or rate notes"></label>
-        <label class="full-width">Additional requests / special requirements<textarea name="notes" placeholder="Please share your company details, purpose of visit, questions, accessibility needs or other requests."></textarea></label>
-        <p class="form-privacy full-width">Please do not enter passport or national ID numbers, date of birth, or payment card details in this enquiry form. Any required registration details can be handled securely by our team during the booking/check-in process. This is an enquiry only; your stay is not confirmed until our team confirms availability and arrangements.</p>
-        <button type="submit" class="button button-dark">Send enquiry <span>→</span></button>
-        <p class="form-status" role="status" aria-live="polite"></p>
+        <input type="hidden" name="_subject" value="New Booking Enquiry – The Palazzo Residence | Guest Details for Review"><input type="hidden" name="_template" value="table"><input type="hidden" name="_cc" value="brownpalazzomw@gmail.com"><input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <h3 class="form-section-title">Guest details</h3>
+        <label>First name<input type="text" name="first_name" autocomplete="given-name" placeholder="First name" required></label><label>Last name<input type="text" name="last_name" autocomplete="family-name" placeholder="Last name" required></label><label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label><label>Phone / WhatsApp<input type="tel" name="phone" autocomplete="tel" placeholder="+265" required></label>
+        <label>Residential address<input type="text" name="guest_address" autocomplete="street-address" placeholder="Street or residential address"></label><label>City / town<input type="text" name="city" autocomplete="address-level2" placeholder="City or town"></label><label>Region / country<input type="text" name="region_country" autocomplete="country-name" placeholder="Region or country"></label><label>Profession (optional)<input type="text" name="profession" placeholder="Occupation / profession"></label><label>Nationality (optional)<input type="text" name="nationality" placeholder="Nationality"></label>
+        <h3 class="form-section-title">Your stay</h3>
+        <label>Arrival date<input type="date" name="arrival" required></label><label>Departure date<input type="date" name="departure" required></label><label>Adults<select name="adults" required><option value="">Select adults</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label><label>Children<select name="children"><option value="0">No children</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></label><label>Type of stay<select name="stay_type" required><option value="">Select stay type</option><option>Business / corporate</option><option>Extended stay / project assignment</option><option>Family / leisure</option><option>Other</option></select></label><label>Accommodation preference<select name="room_type"><option value="">Please advise / no preference</option><option>Residence / whole apartment</option><option>Corporate accommodation</option><option>Other / discuss with team</option></select></label><label>Meal plan preference<select name="board_type"><option value="">Not sure / discuss with team</option><option>Bed only</option><option>Bed and breakfast</option><option>Half board</option><option>Full board</option></select></label><label>Expected length of stay<input type="text" name="length_of_stay" placeholder="e.g. 4 nights or 3 weeks"></label>
+        <h3 class="form-section-title">Company and billing (if applicable)</h3>
+        <label>Organisation / company<input type="text" name="company" autocomplete="organization" placeholder="Company or organisation"></label><label>Company account / reference<input type="text" name="company_account" placeholder="Account or booking reference"></label><label>Who pays for accommodation?<select name="accommodation_payer"><option value="">Select payer</option><option>Myself / guest</option><option>Travel agent</option><option>Company / on account</option></select></label><label>Who pays for extras?<select name="extras_payer"><option value="">Select payer</option><option>Myself / guest</option><option>Travel agent</option><option>Company / on account</option><option>No extras expected</option></select></label>
+        <h3 class="form-section-title">Transport and payment</h3>
+        <label>Car registration (optional)<input type="text" name="car_registration" placeholder="Vehicle registration"></label><label>Car make / model (optional)<input type="text" name="car_details" placeholder="e.g. Toyota Hilux"></label><label>Preferred payment method<select name="payment_method"><option value="">Select if known</option><option>Cash</option><option>Credit / debit card</option><option>Cheque</option><option>Bank transfer / EFT</option><option>Mobile money</option><option>Company account / on account</option></select></label><label>Budget / rate requirements<input type="text" name="rate_requirements" placeholder="Optional budget or rate notes"></label>
+        <label class="full-width">Additional requests / special requirements<textarea name="notes" rows="4" placeholder="Purpose of visit, company details, questions or special requests"></textarea></label>
+        <p class="form-privacy full-width">Please do not enter passport or national ID numbers, date of birth or payment card details in this public enquiry form. This is an enquiry only; your stay is not confirmed until our team confirms availability and arrangements.</p>
+        <button type="submit" class="button button-green submit-button">Send enquiry <span>→</span></button><p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
-  <footer class="site-footer"><a class="logo footer-logo" href="#home"><img src="images/PZ.png" alt="" class="logo-image"><span class="logo-wordmark">THE PALAZZO<small>RESTAURANT · RESIDENCE</small></span></a><p>A place to stay. A place to gather.</p><div class="footer-emails"><a href="mailto:montanapalazzomw@gmail.com">Email Montana Palazzo</a><a href="mailto:brownpalazzomw@gmail.com">Email Brown Palazzo</a></div><small>© <span id="year"></span> The Palazzo · Blantyre, Malawi. All rights reserved.</small></footer>
-  <a href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%2C%20I%20would%20like%20to%20enquire%20about%20the%20restaurant%20or%20residence." class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with The Palazzo on WhatsApp"><span aria-hidden="true">●</span> WhatsApp</a>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><img src="images/PZ.png" class="brand-mark" alt=""><span class="brand-name">THE PALAZZO<small>RESTAURANT · RESIDENCE</small></span></a><p>A place to stay. A place to gather.</p><div class="footer-links"><a href="mailto:montanapalazzomw@gmail.com">Email Montana Palazzo</a><a href="mailto:brownpalazzomw@gmail.com">Email Brown Palazzo</a></div><small>© <span id="year"></span> The Palazzo · Blantyre, Malawi. All rights reserved.</small></footer>
+  <a href="https://wa.me/265886470234?text=Hello%20The%20Palazzo%2C%20I%20would%20like%20to%20enquire%20about%20the%20restaurant%20or%20residence." class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with The Palazzo on WhatsApp">WhatsApp <span aria-hidden="true">↗</span></a>
   <script src="js/script.js"></script>
 </body>
 </html>
