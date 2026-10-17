@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern.css?v=4">
+  <link rel="stylesheet" href="modern.css?v=5">
   <style>
     /* Minimal critical protection; the main layout lives in modern.css. */
     *,*::before,*::after{box-sizing:border-box}
@@ -24,6 +24,28 @@
     @media(max-width:820px){.brand-mark{width:42px;height:42px;max-width:42px;flex-basis:42px}}
   </style>
 
+  <style>
+
+    /* Palazzo brand colour refresh: solid forest green, white icons, no gradients. */
+    .site-header{background:#123d30!important;color:#fff!important;border-bottom-color:#0c2d24!important}
+    .site-header .brand-name,.site-header .primary-nav a:not(.nav-cta){color:#fff!important}
+    .site-header .brand-name small{color:rgba(255,255,255,.78)!important}
+    .site-header .menu span{background:#fff!important}
+    .site-header .primary-nav>a:not(.nav-cta):after{background:#d5a34e!important}
+    .site-header .nav-cta{background:#1b5846!important;color:#fff!important;border:1px solid rgba(255,255,255,.35)!important}
+    .site-header .nav-cta:hover{background:#1b5846!important}
+    .button,.button-gold,.button-green,.button-outline,.nav-cta{background:#123d30!important;color:#fff!important;border-color:#123d30!important}
+    .button:hover,.button-gold:hover,.button-green:hover,.button-outline:hover{background:#1b5846!important;color:#fff!important;border-color:#1b5846!important}
+    .benefit-icon{background:#123d30!important;color:#fff!important;border:1px solid #123d30!important;box-shadow:none!important}
+    .card-arrow,.circle-arrow{background:#123d30!important;color:#fff!important;border:1px solid #123d30!important}
+    .hero-card:hover .card-arrow,.amenity-card:hover .card-arrow{background:#1b5846!important;color:#fff!important}
+.hero-actions .button{background:#1b5846!important;color:#fff!important;border-color:rgba(255,255,255,.45)!important}
+.hero-actions .button:hover{background:#246b55!important;border-color:#246b55!important}
+    .location-line span{display:inline-grid;place-items:center;width:23px;height:23px;margin-right:7px;border-radius:50%;background:#123d30;color:#fff!important;font-size:15px}
+    .primary-nav{color:#fff}
+    @media(max-width:820px){.primary-nav{background:#123d30!important;border-bottom-color:#0c2d24!important}.primary-nav>a:not(.nav-cta){color:#fff!important}.primary-nav .nav-cta{margin-top:8px}}
+
+  </style>
 </head>
 <body>
   <header class="site-header" id="navbar">
@@ -57,11 +79,11 @@
       </div>
       <div class="hero-feature-grid" aria-label="Explore the residence">
         <a class="hero-card" href="#spaces">
-          <img src="images/roomtolive.jpg>
+          <img src="images/roomtolive.jpg" alt="Bedroom at The Palazzo Residence" loading="lazy">
           <span class="hero-card-copy"><span><b>Bedrooms</b><small>Spacious, stylish and relaxing</small></span><span class="card-arrow" aria-hidden="true">→</span></span>
         </a>
         <a class="hero-card" href="#amenities">
-          <img src="images/yourownkit.jpg>
+          <img src="images/yourownkit.jpg" alt="Fully equipped kitchen at The Palazzo Residence" loading="lazy">
           <span class="hero-card-copy"><span><b>Fully equipped kitchen</b><small>Cook at your convenience</small></span><span class="card-arrow" aria-hidden="true">→</span></span>
         </a>
         <a class="hero-card" href="#amenities">
